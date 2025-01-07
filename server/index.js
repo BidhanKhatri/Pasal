@@ -6,6 +6,8 @@ import morgan from "morgan";
 import helmet from "helmet";
 import connectDB from "./config/dbconfig.js";
 import userRouter from "./routes/user.route.js";
+import categoryRouter from "./routes/category.route.js";
+import subCategoryRouter from "./routes/subCategory.route.js";
 
 const app = express();
 dotenv.config();
@@ -28,6 +30,8 @@ app.use(
 
 //routes
 app.use("/api/user", userRouter);
+app.use("/api/category", categoryRouter);
+app.use("/api/subcategory", subCategoryRouter);
 
 const PORT = 8080 || process.env.PORT;
 

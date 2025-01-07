@@ -65,7 +65,7 @@ function ResetPassword() {
       };
 
       const result = await axios.put(
-        "/api/user/reset-password",
+        "/proxy/api/user/reset-password",
         sendingData,
         config
       );

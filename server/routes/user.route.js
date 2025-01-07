@@ -11,7 +11,7 @@ import {
   uploadAvatarController,
   verifyEmailController,
   verifyOtpController,
-} from "../controllers.js/user.controller.js";
+} from "../controllers/user.controller.js";
 import authMiddleware from "../middlewares/auth.middleware.js";
 import upload from "../middlewares/multer.middleware.js";
 

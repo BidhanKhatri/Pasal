@@ -41,7 +41,7 @@ function ForgotPassword() {
       };
 
       const result = await axios.put(
-        "/api/user/forgot-password",
+        "/proxy/api/user/forgot-password",
         sendingData,
         config
       );

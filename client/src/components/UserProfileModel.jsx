@@ -8,6 +8,7 @@ import { logout } from "../redux/userSlice";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import isAdmin from "../utils/isAdmin";
 
 function UserProfileModel({ close }) {
   const userData = useSelector((state) => state?.user);
@@ -48,12 +49,12 @@ function UserProfileModel({ close }) {
   return (
     <>
       <div className="flex flex-col gap-2">
-        <div className="flex items-center  gap-4 ">
+        <div className="flex items-center  gap-2 ">
           <div className="w-12 h-12 rounded-full bg-gray-200/20 flex items-center justify-center shadow-md border ring-2 ring-lime-500 overflow-hidden">
             <img src={userData.avatar} alt="img" className="w-full h-full" />
           </div>
-          <div className="text-sm  bg-lime-600 rounded-md text-white w-fit px-4 py-1 tracking-wide font-semibold">
-            {userData.role}
+          <div className="text-sm  rounded-md  w-fit px-2 py-1 tracking-wide font-semibold">
+            ( {userData.role} )
           </div>
         </div>
         <div className="flex items-center justify-between">
@@ -73,6 +74,40 @@ function UserProfileModel({ close }) {
           </span>
         </div>
         <hr />
+
+        {isAdmin(userData.role) && (
+          <>
+            <Link
+              onClick={handleClose}
+              to="/dashboard/category"
+              className="hover:bg-lime-200/40 p-2 rounded-md transition-all duration-300 ease-in-out"
+            >
+              Category
+            </Link>
+            <Link
+              onClick={handleClose}
+              to="/dashboard/sub-category"
+              className="hover:bg-lime-200/40 p-2 rounded-md transition-all duration-300 ease-in-out"
+            >
+              Sub Category
+            </Link>
+            <Link
+              onClick={handleClose}
+              to="/dashboard/upload-product"
+              className="hover:bg-lime-200/40 p-2 rounded-md transition-all duration-300 ease-in-out"
+            >
+              Upload Product
+            </Link>
+            <Link
+              onClick={handleClose}
+              to="/dashboard/product"
+              className="hover:bg-lime-200/40 p-2 rounded-md transition-all duration-300 ease-in-out"
+            >
+              Product
+            </Link>
+          </>
+        )}
+
         <Link
           onClick={handleClose}
           to="/dashboard/orders"
@@ -88,12 +123,14 @@ function UserProfileModel({ close }) {
           Save Address
         </Link>
         <div>
-          <button
+          <div
             onClick={handleLogout}
-            className=" flex items-center justify-center gap-2 bg-lime-600 px-2 py-1 rounded-md text-white w-full transition-all duration-700 hover:bg-opacity-80"
+            className=" flex items-center justify-between  rounded-md transition-all duration-300 ease-in-out w-full divide-x-2"
           >
-            <IoMdExit /> Logout
-          </button>
+            <button className="flex items-center gap-2 px-4 py-1.5 rounded-md hover:text-white w-full transition-all duration-700 hover:bg-red-500"><IoMdExit /> Logout</button>
+            <button className="flex items-center gap-2  px-4 py-1.5 rounded-md hover:text-white w-full transition-all duration-700 hover:bg-gray-500"><IoMdExit /> Setting</button>
+            
+          </div>
         </div>
       </div>
     </>

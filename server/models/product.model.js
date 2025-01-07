@@ -10,7 +10,7 @@ const productSchema = new mongoose.Schema(
       type: Array,
       default: [],
     },
-    caregoryId: [
+    category: [
       {
         type: mongoose.Schema.ObjectId,
         ref: "category",

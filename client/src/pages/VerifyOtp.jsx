@@ -40,7 +40,7 @@ function VerifyOtp() {
       };
 
       const result = await axios.put(
-        "/api/user/verify-otp",
+        "/proxy/api/user/verify-otp",
         sendingData,
         config
       );

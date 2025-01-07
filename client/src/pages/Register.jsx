@@ -61,7 +61,7 @@ function Register() {
       };
 
       const result = await axios.post(
-        "/api/user/register",
+        "/proxy/api/user/register",
         sendingData,
         config
       );

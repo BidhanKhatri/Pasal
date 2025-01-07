@@ -12,6 +12,9 @@ import Dashboard from "../layouts/Dashboard";
 import ProfilePage from "../pages/ProfilePage";
 import MyOrders from "../pages/MyOrders";
 import SaveAddress from "../pages/SaveAddress";
+import Category from "../adminpages/Category";
+import SubCategory from "../adminpages/SubCategory";
+import AdminPermission from "../layouts/AdminPermission";
 
 const router = createBrowserRouter([
   {
@@ -65,6 +68,22 @@ const router = createBrowserRouter([
           {
             path: "save-address",
             element: <SaveAddress />,
+          },
+          {
+            path: "category",
+            element: (
+              <AdminPermission>
+                <Category />
+              </AdminPermission>
+            ),
+          },
+          {
+            path: "sub-category",
+            element: (
+              <AdminPermission>
+                <SubCategory />
+              </AdminPermission>
+            ),
           },
         ],
       },

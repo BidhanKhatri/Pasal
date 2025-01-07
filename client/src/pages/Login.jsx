@@ -62,6 +62,7 @@ function Login() {
 
       if (result && result.data.success === true) {
         toast.success(result.data.msg);
+        localStorage.setItem("authToken", result.data.data.accesstoken);
         navigate("/");
         const userData = await fetchUserData();
         dispatch(setUserDetails(userData.data));
