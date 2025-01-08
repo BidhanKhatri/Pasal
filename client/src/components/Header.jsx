@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import UserProfileModel from "./UserProfileModel";
 import { useNavigate } from "react-router-dom";
+import PasalLogo from "../assets/images/pasal-logo.png";
 
 const Header = () => {
   const location = useLocation();
@@ -36,7 +37,11 @@ const Header = () => {
       {/* desktop version */}
       <div className="flex items-center justify-between  w-full  ">
         {/* logo section */}
-        <Link to="/">Logo</Link>
+        <Link to="/">
+          <div className=" w-32 h-12">
+            <img src={PasalLogo} alt="pasal-logo" className="w-full h-full object-cover -ml-5"></img>
+          </div>
+        </Link>
 
         {/* search section */}
         <div className="hidden lg:block">

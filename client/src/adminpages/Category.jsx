@@ -100,8 +100,12 @@ const Category = () => {
   };
 
   useEffect(() => {
-    setAllCategoryData(allCategoryStateData);
-  }, [allCategoryStateData]);
+    getAllCategory();
+  }, []);
+
+  // useEffect(() => {
+  //   setAllCategoryData(allCategoryStateData);
+  // }, [allCategoryStateData]);
 
   return (
     <section>

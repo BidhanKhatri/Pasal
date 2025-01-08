@@ -107,7 +107,7 @@ const ProfilePage = () => {
                 type="text"
                 name="name"
                 value={data.name}
-                className="mt-2 rounded-md p-2 outline-none focus:border-lime-500 border bg-lime-100/40"
+                className="mt-2 rounded-md p-2 outline-none focus:border-lime-500 border bg-gray-50"
                 onChange={handleFormChange}
               />
             </div>
@@ -121,7 +121,7 @@ const ProfilePage = () => {
                 name="email"
                 value={data.email}
                 onChange={handleFormChange}
-                className="mt-2 rounded-md p-2 outline-none focus:border-lime-500 border bg-lime-100/40"
+                className="mt-2 rounded-md p-2 outline-none focus:border-lime-500 border bg-gray-50"
               />
             </div>
             <div className="grid">
@@ -133,7 +133,7 @@ const ProfilePage = () => {
                 type="text"
                 name="mobile"
                 value={data?.mobile}
-                className="mt-2 rounded-md p-2 outline-none focus:border-lime-500 border bg-lime-100/40"
+                className="mt-2 rounded-md p-2 outline-none focus:border-lime-500 border bg-gray-50"
                 onChange={handleFormChange}
               />
             </div>

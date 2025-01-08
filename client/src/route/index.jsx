@@ -15,6 +15,7 @@ import SaveAddress from "../pages/SaveAddress";
 import Category from "../adminpages/Category";
 import SubCategory from "../adminpages/SubCategory";
 import AdminPermission from "../layouts/AdminPermission";
+import UploadProduct from "../pages/UploadProduct";
 
 const router = createBrowserRouter([
   {
@@ -82,6 +83,15 @@ const router = createBrowserRouter([
             element: (
               <AdminPermission>
                 <SubCategory />
+              </AdminPermission>
+            ),
+          },
+
+          {
+            path: "upload-product",
+            element: (
+              <AdminPermission>
+                <UploadProduct />
               </AdminPermission>
             ),
           },

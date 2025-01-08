@@ -105,7 +105,7 @@ const SubCategory = () => {
       </div>
 
       <table className="table-fixed w-full border-collapse border border-gray-200 shadow-sm mt-4">
-        <thead className="bg-gray-100 text-gray-600 text-sm uppercase font-medium">
+        <thead className="bg-black text-white text-sm uppercase font-medium">
           <tr>
             <th className="px-4 py-2 border border-gray-200 text-left">Name</th>
 
