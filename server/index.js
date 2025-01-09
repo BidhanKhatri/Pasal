@@ -8,6 +8,7 @@ import connectDB from "./config/dbconfig.js";
 import userRouter from "./routes/user.route.js";
 import categoryRouter from "./routes/category.route.js";
 import subCategoryRouter from "./routes/subCategory.route.js";
+import productRouter from "./routes/product.route.js";
 
 const app = express();
 dotenv.config();
@@ -32,6 +33,7 @@ app.use(
 app.use("/api/user", userRouter);
 app.use("/api/category", categoryRouter);
 app.use("/api/subcategory", subCategoryRouter);
+app.use("/api/product", productRouter);
 
 const PORT = 8080 || process.env.PORT;
 
