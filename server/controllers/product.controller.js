@@ -1,6 +1,7 @@
 import ProductModel from "../models/product.model.js";
 import uploadImageCloudinary from "../utils/uploadImageCloudinary.js";
 
+//add product controller
 export const productController = async (req, res) => {
   try {
     const {
@@ -89,6 +90,55 @@ export const productController = async (req, res) => {
       msg: error.message || error,
       success: false,
       error: true,
+    });
+  }
+};
+
+//get all product controller with pagination
+export const getAllProductController = async (req, res) => {
+  try {
+    let { page, limit, search } = req.body;
+
+    if (!page) {
+      page = 1;
+    }
+
+    if (!limit) {
+      limit = 10;
+    }
+
+    const query = search
+      ? {
+          $text: {
+            $search: search,
+          },
+        }
+      : {}; //created the query for the text search, go to product.model.js to see the index for text search
+
+    const skip = (page - 1) * limit;
+
+    const [data, totalCount] = await Promise.all([
+      ProductModel.find(query)
+        .sort({ createdAt: -1 })
+        .skip(skip)
+        .limit(limit)
+        .populate("category")
+        .populate("subcategory"),
+      ProductModel.countDocuments(query),
+    ]);
+    return res.status(200).json({
+      msg: "Product fetched",
+      totalCount,
+      totalNumberOfPages: Math.ceil(totalCount / limit),
+      data,
+      success: true,
+      error: false,
+    });
+  } catch (error) {
+    return res.status(500).json({
+      msg: error.message || error,
+      error: true,
+      success: false,
     });
   }
 };

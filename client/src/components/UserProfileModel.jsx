@@ -127,9 +127,12 @@ function UserProfileModel({ close }) {
             onClick={handleLogout}
             className=" flex items-center justify-between  rounded-md transition-all duration-300 ease-in-out w-full divide-x-2"
           >
-            <button className="flex items-center gap-2 px-4 py-1.5 rounded-md hover:text-white w-full transition-all duration-700 hover:bg-red-500"><IoMdExit /> Logout</button>
-            <button className="flex items-center gap-2  px-4 py-1.5 rounded-md hover:text-white w-full transition-all duration-700 hover:bg-gray-500"><IoMdExit /> Setting</button>
-            
+            <button className="flex items-center gap-2 px-4 py-1.5 rounded-md hover:text-white w-full transition-all duration-700 hover:bg-red-500">
+              <IoMdExit /> Logout
+            </button>
+            <button className="flex items-center gap-2  px-4 py-1.5 rounded-md hover:text-white w-full transition-all duration-700 hover:bg-gray-500">
+              <IoMdExit /> Setting
+            </button>
           </div>
         </div>
       </div>
