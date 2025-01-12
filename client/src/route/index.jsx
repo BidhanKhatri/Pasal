@@ -15,7 +15,7 @@ import SaveAddress from "../pages/SaveAddress";
 import Category from "../adminpages/Category";
 import SubCategory from "../adminpages/SubCategory";
 import AdminPermission from "../layouts/AdminPermission";
-import UploadProduct from "../pages/UploadProduct";
+import UploadProduct from "../adminpages/UploadProduct";
 import ProductPage from "../adminpages/ProductPage";
 
 const router = createBrowserRouter([

@@ -212,7 +212,7 @@ const UploadProduct = () => {
   return (
     <section className="">
       <div className="w-full p-4 bg-white shadow-md flex items-center justify-between rounded-md">
-        <h2 className="font-semibold text-2xl">Upload Product</h2>
+        <h2 className="text-xl font-semibold text-gray-800">Upload Product</h2>
       </div>
       <div className=" gird mt-4">
         <form onSubmit={uploadProduct} className="px-0">
@@ -446,7 +446,7 @@ const UploadProduct = () => {
             </button>
           </div>
 
-          <button className="bg-lime-600 w-full p-2 rounded-md font-semibold text-white tracking-wider mt-4 hover:bg-opacity-90 transition-all duration-500 ease-in-out">
+          <button className="hover:bg-lime-600 border border-lime-600 w-full p-2 rounded-md font-semibold text-lime-600 hover:text-white tracking-wider mt-4 hover:bg-opacity-90 transition-all duration-500 ease-in-out">
             {loading ? (
               "Uploading product..."
             ) : (

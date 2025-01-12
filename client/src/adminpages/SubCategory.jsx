@@ -91,7 +91,7 @@ const SubCategory = () => {
   return (
     <section>
       <div className="w-full shadow-md px-4 py-2 rounded-md bg-white flex items-center justify-between ">
-        <p className="text-2xl font-semibold">Sub Category </p>
+        <p className="text-xl font-semibold text-gray-800">Sub Category </p>
         <button
           onClick={toggleSubCategoryModel}
           className="border border-lime-500 hover:bg-lime-600 hover:text-white px-4 py-2 rounded-md transition-all duration-400 ease-in-out "

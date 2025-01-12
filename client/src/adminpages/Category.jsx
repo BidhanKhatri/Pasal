@@ -110,7 +110,7 @@ const Category = () => {
   return (
     <section>
       <div className="w-full shadow-md px-4 py-2 rounded-md bg-white flex items-center justify-between ">
-        <p className="text-2xl font-semibold">Category </p>
+        <p className="text-xl font-semibold text-gray-800">Category </p>
         <button
           onClick={toggleCategoryModel}
           className="border border-lime-500 hover:bg-lime-600 hover:text-white px-4 py-2 rounded-md transition-all duration-400 ease-in "
