@@ -3,6 +3,7 @@ import authMiddleware from "../middlewares/auth.middleware.js";
 import upload from "../middlewares/multer.middleware.js";
 import {
   getAllProductController,
+  getProudctByCategory,
   productController,
 } from "../controllers/product.controller.js";
 
@@ -15,5 +16,6 @@ productRouter.post(
   productController
 );
 productRouter.post("/get-product", authMiddleware, getAllProductController);
+productRouter.post("/get-product-by-category", getProudctByCategory);
 
 export default productRouter;

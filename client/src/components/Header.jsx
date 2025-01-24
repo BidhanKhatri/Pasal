@@ -39,7 +39,11 @@ const Header = () => {
         {/* logo section */}
         <Link to="/">
           <div className=" w-32 h-12">
-            <img src={PasalLogo} alt="pasal-logo" className="w-full h-full object-cover -ml-5"></img>
+            <img
+              src={PasalLogo}
+              alt="pasal-logo"
+              className="w-full h-full object-cover -ml-5"
+            ></img>
           </div>
         </Link>
 
@@ -75,7 +79,7 @@ const Header = () => {
                   </div>
 
                   {isUserProfileActive && (
-                    <div className="absolute bg-white top-12 right-0 w-52 p-4 rounded-md lg:shadow-md animate-custom">
+                    <div className="absolute bg-white top-12 -right-20 w-62 p-4 rounded-md lg:shadow-md animate-custom">
                       <UserProfileModel close={handleCloseUserProfileModel} />
                     </div>
                   )}

@@ -48,7 +48,7 @@ function UserProfileModel({ close }) {
 
   return (
     <>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2 ">
         <div className="flex items-center  gap-2 ">
           <div className="w-12 h-12 rounded-full bg-gray-200/20 flex items-center justify-center shadow-md border ring-2 ring-lime-500 overflow-hidden">
             <img src={userData.avatar} alt="img" className="w-full h-full" />

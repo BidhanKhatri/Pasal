@@ -142,3 +142,38 @@ export const getAllProductController = async (req, res) => {
     });
   }
 };
+
+//get product according to category
+
+export const getProudctByCategory = async (req, res) => {
+  try {
+    const { id } = req.body;
+
+    console.log("ako cha hai ", id);
+
+    if (!id) {
+      return res.status(400).json({
+        msg: "Invalid Id",
+        success: false,
+        error: true,
+      });
+    }
+
+    const findProductByCat = await ProductModel.find({
+      category: { $in: id },
+    }).limit(15);
+
+    return res.status(200).json({
+      msg: " product by category fetched",
+      data: findProductByCat,
+      success: true,
+      error: false,
+    });
+  } catch (error) {
+    return res.status(500).json({
+      message: error.message || error,
+      success: false,
+      error: true,
+    });
+  }
+};

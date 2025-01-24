@@ -173,7 +173,7 @@ export async function loginController(req, res) {
 
     return res.status(200).json({
       msg: "Login Successfully",
-      error: false,
+      reror: false,
       success: true,
       data: {
         accesstoken,

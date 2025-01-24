@@ -56,8 +56,6 @@ const UpdateProfilePicModel = ({ close = () => {} }) => {
     }
   };
 
-
-
   return (
     <div className="fixed top-0 left-0 right-0 bottom-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center">
       <div className="relative bg-white mx-auto max-w-md p-6 rounded-md shadow-md animate-custom w-full flex flex-col items-center justify-center gap-4">
